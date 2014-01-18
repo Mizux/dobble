@@ -1,4 +1,4 @@
-dobble
+Dobble
 ======
 
-Custom dobble with my assets
+Custom dobble with my assets.
