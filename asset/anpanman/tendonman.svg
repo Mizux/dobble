@@ -26,7 +26,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.7285156"
      inkscape:cx="99.761113"
-     inkscape:cy="139.33859"
+     inkscape:cy="162.47983"
      inkscape:document-units="px"
      inkscape:current-layer="g4691"
      showgrid="false"
@@ -118,9 +118,9 @@
          sodipodi:rx="10"
          sodipodi:ry="10"
          d="m 94,160 a 10,10 0 1 1 -20,0 10,10 0 1 1 20,0 z"
-         transform="matrix(1.0744968,0,0,1.0744968,-15.122652,-2.865314)" />
+         transform="matrix(1.0744968,0,0,1.0744968,-15.122652,-10.865314)" />
       <path
-         transform="matrix(1.0889601,0,0,1.0889601,89.592377,-5.324071)"
+         transform="matrix(1.0889601,0,0,1.0889601,89.592377,-13.324071)"
          d="m 94,160 a 10,10 0 1 1 -20,0 10,10 0 1 1 20,0 z"
          sodipodi:ry="10"
          sodipodi:rx="10"
@@ -133,7 +133,7 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path3791"
-         d="m 176,198 c -16,16 -80,16 -96,0"
+         d="m 176,180 c -16,16 -80,16 -96,0"
          style="fill:none;stroke:#000000;stroke-width:2.60011482;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <path
          sodipodi:type="arc"
@@ -144,7 +144,7 @@
          sodipodi:rx="24"
          sodipodi:ry="20"
          d="m 152,128 a 24,20 0 1 1 -48,0 24,20 0 1 1 48,0 z"
-         transform="matrix(0.67696368,0,0,0.76985791,41.028605,65.21412)" />
+         transform="matrix(0.50688497,0,0,0.57644068,62.79868,83.971525)" />
       <g
          id="g3771"
          transform="translate(-4,14)">
