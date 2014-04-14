@@ -1,41 +1,37 @@
 #include <dobble/card.hpp>
+#include <QGraphicsScene>
+#include <QString>
 #include <QImage>
 #include <QPainter>
 
 namespace Dobble {
 
 Card::Card():
-  _scene(),
   _itemList()
 {
-  _scene = new QGraphicsScene(this);
 }
 
 bool Card::addItem(const ItemPtr& item)
 {
-  QSet<ItemPtr>::const_iterator it = _itemList.insert(item);
-
-  if (it == _itemList.end())
-    return false;
-  else
-    return true;
+  return _itemList.insert(item).second;
 }
 
 bool Card::removeItem(const ItemPtr& item)
 {
-  return _itemList.remove(item);
+  return 1 == _itemList.erase(item);
 }
 
-bool Card::save(const QString& filename)
+bool Card::save(const std::string& filename)
 {
-  _scene->clearSelection();
-  _scene->setSceneRect(_scene->itemsBoundingRect());
+  QGraphicsScene scene;
+  scene.clearSelection();
+  scene.setSceneRect(scene.itemsBoundingRect());
 
-  QImage image(_scene->sceneRect().size().toSize(), QImage::Format_ARGB32);
+  QImage image(scene.sceneRect().size().toSize(), QImage::Format_ARGB32);
   image.fill(Qt::transparent);
   QPainter painter(&image);
-  _scene->render(&painter);
-  return image.save(filename);
+  scene.render(&painter);
+  return image.save(QString::fromStdString(filename));
 }
 
 }

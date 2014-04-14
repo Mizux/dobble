@@ -2,14 +2,13 @@
 
 namespace Dobble {
 
-Deck::Deck()
+Deck::Deck():
+  _cardList(),
+  _itemList()
 {}
 
 bool Deck::build()
 {
-  QList<ItemPtr> list = _itemList.toList();
-  qSort(list);
-
   return true;
 }
 

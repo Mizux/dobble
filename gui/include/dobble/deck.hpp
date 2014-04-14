@@ -2,34 +2,33 @@
 #ifndef DECK_HPP
 #define DECK_HPP
 
-#include <QObject>
-#include <QSet>
-#include <QSharedPointer>
+#include <set>
+#include <string>
+#include <boost/shared_ptr.hpp>
 
 namespace Dobble {
-class Card;
-typedef QSharedDataPointer<Card> CardPtr;
+  class Card;
+  typedef boost::shared_ptr<Card> CardPtr;
 
-class Item;
-typedef QSharedDataPointer<Item> ItemPtr;
+  class Item;
+  typedef boost::shared_ptr<Item> ItemPtr;
 
-class Deck : public QObject
-{
-    Q_OBJECT
+  class Deck
+  {
     Deck(const Deck&);
     Deck& operator=(const Deck&);
 
-  public:
+    public:
     Deck();
 
-    bool setItemDirectory(const QString& directory);
+    bool setItemDirectory(const std::string& directory);
 
     bool build();
 
-  protected:
-    QSet<CardPtr> _cardList;
-    QSet<ItemPtr> _itemList;
-};
+    protected:
+    std::set<CardPtr> _cardList;
+    std::set<ItemPtr> _itemList;
+  };
 
 }
 

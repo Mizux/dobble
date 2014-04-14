@@ -29,7 +29,6 @@ if(UNIX AND NOT APPLE)
   endforeach(arg ${CXX_WARNFLAGS})
 endif()
 
-set(BOOST_ROOT /home/clemolgat/.local/share/qi/toolchains/master-linux64/boost)
 find_package(Boost REQUIRED)
 include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})

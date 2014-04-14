@@ -2,34 +2,30 @@
 #ifndef CARD_HPP
 #define CARD_HPP
 
-#include <QObject>
-#include <QSet>
-#include <QSharedPointer>
-#include <QString>
-#include <QGraphicsScene>
+#include <set>
+#include <string>
+#include <boost/shared_ptr.hpp>
 
 namespace Dobble {
-class Item;
-typedef QSharedPointer<Item> ItemPtr;
+  class Item;
+  typedef boost::shared_ptr<Item> ItemPtr;
 
-class Card : public QObject
-{
-    Q_OBJECT
+  class Card
+  {
     Card(const Card&);
     Card& operator=(const Card&);
 
-  public:
+    public:
     Card();
 
     bool addItem(const ItemPtr& item);
     bool removeItem(const ItemPtr& item);
 
-    bool save(const QString& filename);
+    bool save(const std::string& filename);
 
-  protected:
-    QGraphicsScene* _scene;
-    QSet<ItemPtr> _itemList;
-};
+    protected:
+    std::set<ItemPtr> _itemList;
+  };
 
 }
 
